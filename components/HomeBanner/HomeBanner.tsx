@@ -5,8 +5,6 @@ const HomeBanner = () => {
     <BannerContainer>
       <Layer0>
         <Sphere1/>
-        {/* <Sphere2/> */}
-        {/* <Sphere3/> */}
       </Layer0>
       <Layer1>
         <Title>
