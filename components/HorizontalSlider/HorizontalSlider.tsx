@@ -33,8 +33,6 @@ const HorizontalSlider = () => {
     console.log(yValue);
   };
 
-  
-
   // useEffect(() => {
   //   getPosition();
   // }, []);
