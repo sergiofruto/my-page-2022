@@ -1,0 +1,4 @@
+- Change Slider grid layout
+- Make slider work with React and load the components
+- Add custom cursor
+- Add Framer Motion

@@ -33,6 +33,15 @@ const HorizontalSlider = () => {
     console.log(yValue);
   };
 
+  const handleMouseMove = (e) => {
+    const mouseDelta = parseFloat(xValue) - e.clientX;
+    const maxDelta = window.innerWidth / 2;
+    const percentage = (mouseDelta / maxDelta) * -100;
+    const nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage;
+    const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+
+  }
+
   // useEffect(() => {
   //   getPosition();
   // }, []);
@@ -41,7 +50,7 @@ const HorizontalSlider = () => {
     <SliderContainer onClick={handleOnDown}>
       <Slider ref={sliderRef}>
         { mediaArr.map((media) => (
-          <Slide src={media.img} alt={media.name} />
+          <Slide src={media.img} alt={media.name} key={media.img}/>
         ))}
       </Slider>
     </SliderContainer>

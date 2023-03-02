@@ -2,13 +2,13 @@ import { useState, useEffect } from 'react';
 import { Montserrat } from '@next/font/google'
 import '../styles/global.css';
 import { AnimatePresence } from 'framer-motion';
-import Router from "next/router"
-import PageLoader from "../components/PageLoader"
+import Router from "next/router";
+import PageLoader from "../components/PageLoader";
 
 const montserrat = Montserrat({
   subsets: ['latin'],
   }
-)
+);
 
 // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {
