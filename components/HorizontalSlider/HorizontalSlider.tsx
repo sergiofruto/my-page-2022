@@ -33,14 +33,13 @@ const HorizontalSlider = () => {
     console.log(yValue);
   };
 
-  const handleMouseMove = (e) => {
-    const mouseDelta = parseFloat(xValue) - e.clientX;
-    const maxDelta = window.innerWidth / 2;
-    const percentage = (mouseDelta / maxDelta) * -100;
-    const nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage;
-    const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
-
-  }
+  // const handleMouseMove = (e) => {
+  //   const mouseDelta = parseFloat(xValue) - e.clientX;
+  //   const maxDelta = window.innerWidth / 2;
+  //   const percentage = (mouseDelta / maxDelta) * -100;
+  //   const nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage;
+  //   const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+  // }
 
   // useEffect(() => {
   //   getPosition();
