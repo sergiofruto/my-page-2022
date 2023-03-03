@@ -2,7 +2,17 @@ import React from 'react'
 
 type Props = {}
 
-export default function Main({}: Props) {
+//create a handleLeftClick function
+
+const handleLeftClick = () => {
+  console.log( 'left arrow clicked');
+}
+
+const handleRightClick = () => {
+  console.log( 'right arrow clicked');
+}
+
+export default function Main({}: Props): JSX.Element {
   return (
     <main>
       <article className="main-article" data-index="0" data-status="active">
@@ -19,7 +29,7 @@ export default function Main({}: Props) {
           <h2>Flor Mazza, Canon Rebel T7</h2>
         </div>
         <div className="article-nav-section article-section">
-          <div className="nav-section-arrow left" onclick="handleLeftClick()">
+          <div className="nav-section-arrow left" onClick={handleLeftClick}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -35,7 +45,7 @@ export default function Main({}: Props) {
               />
             </svg>
           </div>
-          <div className="nav-section-arrow right" onclick="handleRightClick()">
+          <div className="nav-section-arrow right" onClick={handleRightClick}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -67,7 +77,7 @@ export default function Main({}: Props) {
           <h2>Gaston Rotger, Sony Alpha III</h2>
         </div>
         <div className="article-nav-section article-section">
-          <div className="nav-section-arrow left" onclick="handleLeftClick()">
+          <div className="nav-section-arrow left" onClick={handleLeftClick}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -83,7 +93,7 @@ export default function Main({}: Props) {
               />
             </svg>
           </div>
-          <div className="nav-section-arrow right" onclick="handleRightClick()">
+          <div className="nav-section-arrow right" onClick={handleRightClick}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -115,7 +125,7 @@ export default function Main({}: Props) {
           <h2>Federico Abril, Canon Rebel 7T</h2>
         </div>
         <div className="article-nav-section article-section">
-          <div className="nav-section-arrow left" onClick="handleLeftClick()">
+          <div className="nav-section-arrow left" onClick={handleLeftClick}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -131,7 +141,7 @@ export default function Main({}: Props) {
               />
             </svg>
           </div>
-          <div className="nav-section-arrow right" onClick="handleRightClick()">
+          <div className="nav-section-arrow right" onClick={handleRightClick}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
