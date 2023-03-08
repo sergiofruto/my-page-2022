@@ -1,13 +1,4 @@
-import styled, {keyframes} from "styled-components";
-
-const gradient = keyframes`
-   from {
-    background-position: 0% 50%;
-   }
-   to {
-    background-position: 100% 50%;
-   }
-`;
+import styled from "styled-components";
 
 export const Title = styled.h1`
   margin: 0;
@@ -21,12 +12,7 @@ export const Subtitle = styled.h2`
   margin: 0;
   font-size: 3rem;
   font-weight: 800;
-  background-image: linear-gradient(90deg, var(--aquamarine), var(--candy-apple-red), var(--orange-web));
-  background-size: 300% 300%;
-  animation: ${gradient} 10s ease infinite alternate;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  color: #00d0ff;
 `;
 
 export const BannerContainer = styled.div`
@@ -54,12 +40,12 @@ export const Layer1 = styled.div`
   z-index: 10;
 `;
 
-export const Sphere = styled.div`
+const Sphere = styled.div`
   position: absolute;
   width: 30vw;
   height: 30vw;
   border-radius: 50%;
-  filter: blur(var(--blur));
+  filter: blur(40px);
 `;
 
 export const Sphere1 = styled(Sphere)`
@@ -67,21 +53,22 @@ export const Sphere1 = styled(Sphere)`
   left: 0;
   background: linear-gradient(-45deg, #ee7752, #972bff, #23a6d5, #23d5ab);
   background-size: 400% 400%;
-  animation: ${gradient} 12s ease-in infinite alternate;
+  animation: gradient 12s ease infinite;
 
 `;
 
 export const Sphere2 = styled(Sphere)`
   top: 0;
-  left: 30%;
+  left: 40%;
   background: linear-gradient(270deg, #00ffbd, #ff00ea, #fffa00);
   background-size: 400% 400%;
-  animation: ${gradient} 15s ease-in infinite alternate;
+  animation: gradient 12s ease infinite;
 `;
 
 export const Sphere3 = styled(Sphere)`
-  top: 15%;
-  left: 10%;
-  background: linear-gradient(90deg, hsla(143, 100%, 50%, 1) 0%, hsla(246, 100%, 50%, 1) 50%, hsla(32, 100%, 50%, 1) 100%);  background-size: 400% 400%;
-  animation: ${gradient} 10s ease-in infinite alternate;
+  top: 25%;
+  left: 20%;
+  background: linear-gradient(329deg, #484cfb, #00ff4d, #ffc204);
+  background-size: 400% 400%;
+  animation: gradient 12s ease infinite;
 `;

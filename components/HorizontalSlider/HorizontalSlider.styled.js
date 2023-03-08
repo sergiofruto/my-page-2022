@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SliderContainer = styled.section`
   width: 100vw;
   height: 100vh;
-  background-color: black;
+  background-color: var(--background-color);
   margin: 0;
   overflow: hidden;
   color: white;

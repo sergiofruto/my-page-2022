@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Montserrat } from '@next/font/google'
 import '../styles/global.css';
-import { AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Router from "next/router";
 import PageLoader from "../components/PageLoader";
 
@@ -14,9 +14,9 @@ const montserrat = Montserrat({
 export default function MyApp({ Component, pageProps }) {
   return (
     <AnimatePresence mode="wait" initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
-      <main className={montserrat.className}>
+      <motion.main className={montserrat.className}>
         <Component {...pageProps} />
-      </main>
+      </motion.main>
     </AnimatePresence>
   );
 }
