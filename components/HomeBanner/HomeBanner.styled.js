@@ -81,6 +81,13 @@ export const Sphere = styled.div`
   height: 100%;
   border-radius: 50%;
   filter: blur(var(--blur));
+
+  @media (min-width: 768px) {
+    width: 30vw;
+    height: 30vw;
+    top: 50%;
+    left: 50%;
+  }
 `;
 
 export const Sphere1 = styled(Sphere)`
