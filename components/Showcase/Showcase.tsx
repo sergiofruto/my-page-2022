@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { BsChevronLeft } from "react-icons/bs";
 import { BsChevronRight } from "react-icons/bs";
 import HomeBanner from "../HomeBanner/HomeBanner";
-import HomeBannerTest from "../HomeBannerTest/HomeBannerTest";
 import HorizontalSlider from "../HorizontalSlider/HorizontalSlider";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from './Showcase.module.css';
@@ -14,8 +13,7 @@ const Showcase = () => {
 
   const components = [
     <HomeBanner />,
-    <HorizontalSlider />,
-    <HomeBannerTest />
+    <HorizontalSlider />
   ];
 
   const handleLeftClick = () => {

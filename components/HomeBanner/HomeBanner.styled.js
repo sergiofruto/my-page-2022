@@ -11,15 +11,21 @@ const gradient = keyframes`
 
 export const Title = styled.h1`
   margin: 0;
-  font-size: 4rem;
+  font-size: 2rem;
   line-height: 1.15;
   text-transform: uppercase;
   font-weight: 800;
+
+  @media (min-width: 768px) {
+    font-size: 4rem;
+  }
 `;
+
+
 
 export const Subtitle = styled.h2`
   margin: 0;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 800;
   background-image: linear-gradient(90deg, var(--aquamarine), var(--candy-apple-red), var(--orange-web));
   background-size: 300% 300%;
@@ -27,6 +33,10 @@ export const Subtitle = styled.h2`
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
 `;
 
 export const BannerContainer = styled.div`
@@ -38,26 +48,37 @@ export const BannerContainer = styled.div`
 
 export const Layer0 = styled.div`
   position: absolute;
-  width: 40vw;
-  height: 40vw;
-  top: 50%;
-  left: 50%;
+  width: 50vw;
+  height: 50vw;
+  top: 30%;
+  left: 42.5%;
   transform: translate(-50%, -50%);
+
+  @media (min-width: 768px) {
+    width: 40vw;
+    height: 40vw;
+    top: 50%;
+    left: 50%;
+  }
 `;
 
 export const Layer1 = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 3em;
+  padding: 1em;
   margin-top: auto;
   z-index: 10;
+
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
 `;
 
 export const Sphere = styled.div`
   position: absolute;
-  width: 30vw;
-  height: 30vw;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   filter: blur(var(--blur));
 `;

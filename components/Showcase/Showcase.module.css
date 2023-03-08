@@ -2,7 +2,15 @@
   flex-grow: 1;
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 120px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 120px;
+}
+
+@media (min-width: 768px) {
+  .showcase-container {
+    grid-template-columns: 1fr 120px;
+    grid-template-rows: 1fr;
+  }
 }
 
 .showcase-slider {

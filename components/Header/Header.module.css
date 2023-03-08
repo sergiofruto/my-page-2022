@@ -5,12 +5,18 @@
 }
 
 .nav-section {
-  padding: 3rem 2rem;
+  padding: 2rem 1rem;
   display: flex;
   gap: 1rem;
   align-items: center;
   justify-content: center;
   border-left: 1px solid var(--border-color);
+}
+
+@media (min-width: 768px) {
+  .nav-section {
+    padding: 3rem 2rem;
+  }
 }
 
 .nav-logo-section,
