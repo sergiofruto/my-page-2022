@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect} from 'react';
-import {SliderContainer, Slider, Slide} from './HorizontalSlider.styled';
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform, useMotionValue } from "framer-motion";
 import styles from './HorizontalSlider.module.css';
 
 const HorizontalSlider = () => {
@@ -50,25 +49,56 @@ const HorizontalSlider = () => {
   const [sliderWidth, setSliderWidth] = useState(0);
   const sliderRef = useRef();
 
+  const containerVariants = {
+    hidden: { x: 300, opacity: 0 },
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const childVariants = {
+    hidden: { x: 300, opacity: 0 },
+    show: { x: 0, opacity: 1, transition: { delay: 0.5 }},
+  };
+
   useEffect(() => {
-    setSliderWidth(sliderRef.current.scrollWidth - sliderRef.current.offsetWidth);
+    sliderRef.current
+      ? setSliderWidth(
+          sliderRef.current.scrollWidth - sliderRef.current.offsetWidth
+        )
+      : "";
   }, []);
 
   return (
-    <motion.div className={styles["slider"]} ref={sliderRef}>
-      <motion.div
+    <div className={styles["slider"]} ref={sliderRef}>
+      <motion.ul
         drag="x"
         dragConstraints={{ right: 0, left: -sliderWidth }}
-        whileTap={{cursor: "grabbing"}}
+        whileTap={{ cursor: "grabbing" }}
         className={styles["slider-inner"]}
+        variants={containerVariants}
+        initial="hidden"
+        animate="show"
       >
         {mediaArr.map((media) => (
-          <motion.div className={styles["slider-item"]}>
-            <img src={media.img} alt={media.name} key={media.img} />
-          </motion.div>
+          <motion.li
+            className={styles["slider-item"]}
+            key={media.img}
+            variants={childVariants}
+          >
+            <motion.img
+              src={media.img}
+              alt={media.name}
+              style={{ translateX: -5 }}
+            />
+          </motion.li>
         ))}
-      </motion.div>
-    </motion.div>
+      </motion.ul>
+    </div>
   );
 }
  

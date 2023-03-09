@@ -62,9 +62,7 @@ const Showcase = () => {
         >
           <BsChevronRight size={"3rem"} color={"FFFFFF"} />
         </button>
-        <button 
-          className={styles["showcase-button"]} 
-          onClick={handleLeftClick}>
+        <button className={styles["showcase-button"]} onClick={handleLeftClick}>
           <BsChevronLeft size={"3rem"} color={"FFFFFF"} />
         </button>
       </div>
