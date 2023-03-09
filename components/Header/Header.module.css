@@ -19,9 +19,15 @@
   }
 }
 
-.nav-logo-section,
+.nav-logo-section {
+  padding: 0;
+  flex: 0 1 120px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
 .nav-link-section {
-  flex-basis: calc(100% / 3);
+  flex-basis: calc(100% / 2);
 }
 
 .nav-link-section a {
@@ -37,6 +43,7 @@
   width: 32px;
   fill: #FFFFFF;
   color: #FFFFFF;
+  margin: 0 auto;
 }
 
 .nav-link-section {
@@ -44,9 +51,12 @@
   display: flex;
 }
 
-.nav-social-section,
-.nav-contact-section {
+.nav-social-section {
   flex-grow: 1;
+}
+
+.nav-contact-section {
+  flex: 0 1 120px;
 }
 
 .nav-social-section {

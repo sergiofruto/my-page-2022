@@ -95,7 +95,6 @@ const HorizontalSlider = () => {
             <motion.img
               src={media.img}
               alt={media.name}
-              style={{ translateX: -5 }}
             />
           </motion.li>
         ))}
