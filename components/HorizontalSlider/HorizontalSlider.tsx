@@ -66,10 +66,12 @@ const HorizontalSlider = () => {
   };
 
   useEffect(() => {
-    sliderRef.current
-      ? setSliderWidth(
-          sliderRef.current.scrollWidth - sliderRef.current.offsetWidth
-        )
+    const node = sliderRef.current as any;
+    const sliderScrollWidth = node.scrollWidth;
+    const sliderScrollOffsetWidth = node.offsetWidth;
+
+    sliderScrollWidth && sliderScrollOffsetWidth
+      ? setSliderWidth(sliderScrollWidth - sliderScrollOffsetWidth)
       : "";
   }, []);
 
