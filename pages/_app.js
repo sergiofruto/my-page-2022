@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Montserrat } from '@next/font/google'
 import '../styles/global.css';
+// import 'tailwindcss/tailwind.css'
 import { motion, AnimatePresence } from 'framer-motion';
-import Router from "next/router";
-import PageLoader from "../components/PageLoader";
 
 const montserrat = Montserrat({
   subsets: ['latin'],

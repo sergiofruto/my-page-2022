@@ -26,6 +26,18 @@
   justify-content: center;
   display: flex;
 }
+
+.nav-section > img {
+  max-width: 64px;
+  margin: 0 auto;
+}
+
+/* @media (min-width: 768px) {
+  .nav-section > img {
+    max-width: 100px;
+  }
+} */
+
 .nav-link-section {
   flex-basis: calc(100% / 2);
 }
