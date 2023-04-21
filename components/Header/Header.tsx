@@ -1,10 +1,10 @@
-import styles from './Header.module.css';
-import classNames from 'classnames';
-import Link from 'next/link';
+import styles from "./Header.module.css";
+import classNames from "classnames";
+import Link from "next/link";
 import { BsGithub } from "react-icons/bs";
 import { BsStackOverflow } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
-import { BsFillEnvelopeFill } from "react-icons/bs";
+import { HiMenuAlt3 } from "react-icons/hi";
 
 const Header = () => {
   return (
@@ -16,7 +16,9 @@ const Header = () => {
             styles["nav-section"]
           )}
         >
-          <img src="/sf-logo.png" alt="SF LOGO" />
+          <Link href="/">
+            <span className={styles["logo-initials"]}>SF</span>
+          </Link>
         </div>
         <div
           className={classNames(
@@ -41,12 +43,12 @@ const Header = () => {
           )}
         >
           <a href="mailto:someone@example.com">
-            <BsFillEnvelopeFill size="1rem" />
+            <HiMenuAlt3 size="2rem" />
           </a>
         </div>
       </nav>
     </header>
   );
-}
+};
 
-export default Header
+export default Header;

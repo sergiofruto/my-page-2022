@@ -37,9 +37,8 @@ body {
   background-color: var(--background-color);
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
-  overflow: hidden;
 }
 
 body,
@@ -59,5 +58,5 @@ a {
 main {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }

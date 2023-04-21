@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Montserrat } from '@next/font/google'
+import '../styles/sass/main.scss';
 import '../styles/global.css';
 // import 'tailwindcss/tailwind.css'
 import { motion, AnimatePresence } from 'framer-motion';

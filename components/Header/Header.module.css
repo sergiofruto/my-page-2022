@@ -19,6 +19,16 @@
   }
 }
 
+.nav .logo-initials {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.nav-logo-section a {
+  display: block;
+  margin: 0 auto;
+}
+
 .nav-logo-section {
   padding: 0;
   flex: 0 1 120px;
@@ -73,6 +83,10 @@
 
 .nav-social-section {
   gap: 3rem;
+}
+
+.nav-social-section > a {
+  display: none;
 }
 
 .nav-social-section>svg {
