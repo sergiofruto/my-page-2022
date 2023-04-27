@@ -5,6 +5,7 @@ import { BsGithub } from "react-icons/bs";
 import { BsStackOverflow } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import { HiMenuAlt3 } from "react-icons/hi";
+import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
 
 const Header = () => {
   return (
@@ -35,6 +36,7 @@ const Header = () => {
           <Link href="https://www.linkedin.com/in/sergio-fruto/">
             <BsLinkedin size="1rem" />
           </Link>
+          <ThemeSwitch />
         </div>
         <div
           className={classNames(

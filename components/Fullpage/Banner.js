@@ -17,8 +17,8 @@ const Banner = () => {
 
 const AnimatedLetters = ({ title }) => (
   <span className="row-title">
-    {[...title].map((letter) => (
-      <span className="row-letter">{letter}</span>
+    {[...title].map((letter, i) => (
+      <span className="row-letter" key={`${letter}${i}`} >{letter}</span>
     ))}
   </span>
 );

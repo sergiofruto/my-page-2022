@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { ThemeProvider } from 'next-themes'
 import { Montserrat } from '@next/font/google'
 import '../styles/sass/main.scss';
 import '../styles/global.css';
@@ -13,10 +14,12 @@ const montserrat = Montserrat({
 // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {
   return (
-    <AnimatePresence mode="wait" initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
-      <motion.main className={montserrat.className}>
-        <Component {...pageProps} />
-      </motion.main>
-    </AnimatePresence>
+    <ThemeProvider>
+      <AnimatePresence mode="wait" initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
+        <motion.main className={montserrat.className}>
+          <Component {...pageProps} />
+        </motion.main>
+      </AnimatePresence>
+    </ThemeProvider>
   );
-}
+};

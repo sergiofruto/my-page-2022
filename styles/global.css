@@ -16,17 +16,24 @@
 
 @tailwind utilities;
 
-
 :root {
+  --fg-color: #000;
+  --bg-color: #f0eff1;
+  --txt-color: #000;
   --background-color: rgb(6, 11, 25);
   --border-color: rgb(255, 255, 255, 0.1);
   --base-white: #ffffff;
   --hightlight-color: #ff6b6b;
   --blur: 40px;
-
   --aquamarine: #00ffbf;
   --candy-apple-red: #ff1500;
   --orange-web: #ffae00;
+}
+
+[data-theme="dark"] {
+  --fg-color: #fff;
+  --bg-color: #000;
+  --txt-color: #fff;
 }
 
 * {
@@ -34,11 +41,11 @@
 }
 
 body {
-  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
+  background-color: var(--bg-color);
 }
 
 body,
@@ -48,11 +55,11 @@ h3,
 a,
 p,
 span {
-  color: var(--base-white);
+  color: var(--txt-color);
 }
 
 a {
-  text-decoration: none;
+  color: var(--aquamarine);
 }
 
 main {
