@@ -1,20 +1,23 @@
-import React, { ReactNode } from 'react'
-import Head from 'next/head'
-
-import Header from './Header/Header';
+import React, { ReactNode } from "react";
+import Head from "next/head";
+import Header from "./Header/Header";
 
 type Props = {
-  children?: ReactNode
-  title?: string
-}
+  children?: ReactNode;
+  title?: string;
+  theme?: string;
+};
 
 const variants = {
   hidden: { opacity: 0, x: -200, y: 0 },
   enter: { opacity: 1, x: 0, y: 0 },
   exit: { opacity: 0, x: 0, y: -100 },
-}
+};
 
-const Layout = ({ children, title = "This is the default title" }: Props) => (
+const Layout = (
+  { children, title = "This is the default title" }: Props,
+  theme = "dark"
+) => (
   <>
     <Head>
       <title>{title}</title>
@@ -26,4 +29,4 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
   </>
 );
 
-export default Layout
+export default Layout;
