@@ -76,7 +76,7 @@
       span {
         font-size: 18px;
         font-weight: 600;
-        color: $black;
+        color: var(--txt-color);
         margin: 4px 0;
         @media (max-width: $layout-breakpoint-xsmall) {
           font-size: 10px;

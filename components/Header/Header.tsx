@@ -6,10 +6,11 @@ import { BsStackOverflow } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import { HiMenuAlt3 } from "react-icons/hi";
 import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
+import ShowcaseControls from "../ShowcaseControls/ShowcaseControls";
 
 const Header = () => {
   return (
-    <header>
+    <header className={styles.header}>
       <nav className={styles.nav}>
         <div
           className={classNames(
@@ -20,6 +21,19 @@ const Header = () => {
           <Link href="/">
             <span className={styles["logo-initials"]}>SF</span>
           </Link>
+        </div>
+        <div
+          className={classNames(
+            styles["nav-contact-section"],
+            styles["nav-section"]
+          )}
+        >
+          <a href="mailto:someone@example.com">
+            <HiMenuAlt3 size="2rem" />
+          </a>
+        </div>
+        <div>
+          <ShowcaseControls></ShowcaseControls>
         </div>
         <div
           className={classNames(
@@ -37,16 +51,6 @@ const Header = () => {
             <BsLinkedin size="1rem" />
           </Link>
           <ThemeSwitch />
-        </div>
-        <div
-          className={classNames(
-            styles["nav-contact-section"],
-            styles["nav-section"]
-          )}
-        >
-          <a href="mailto:someone@example.com">
-            <HiMenuAlt3 size="2rem" />
-          </a>
         </div>
       </nav>
     </header>

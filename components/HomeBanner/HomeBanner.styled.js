@@ -17,7 +17,7 @@ export const Title = styled.h1`
   font-weight: 800;
 
   @media (min-width: 768px) {
-    font-size: 4rem;
+    font-size: 6rem;
   }
 `;
 
@@ -35,7 +35,7 @@ export const Subtitle = styled.h2`
   color: transparent;
 
   @media (min-width: 768px) {
-    font-size: 3rem;
+    font-size: 4.5rem;
   }
 `;
 

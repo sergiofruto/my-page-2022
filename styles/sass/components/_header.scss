@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   padding: 0 108px;
-  color: $black;
+  color: var(--txt-color);
   @media (max-width: $layout-breakpoint-medium) {
     padding: 0 72px;
     font-size: 1.6rem;
@@ -28,9 +28,9 @@
       }
     }
     .nav {
-      @media (max-width: $layout-breakpoint-medium) {
-        display: none;
-      }
+      // @media (max-width: $layout-breakpoint-medium) {
+      //   display: none;
+      // }
       display: flex;
       align-items: center;
       justify-content: center;
@@ -42,7 +42,7 @@
         margin: 0 40px;
         a {
           text-decoration: none;
-          color: $black;
+          color: var(--txt-color);
           white-space: nowrap;
         }
       }
@@ -52,9 +52,9 @@
         flex: 1;
       }
       a {
-        color: $black;
+        color: var(--txt-color);
         text-decoration: none;
-        border-bottom: 2px solid $black;
+        border-bottom: 2px solid var(--txt-color);
         padding-bottom: 12px;
         white-space: nowrap;
         @media (max-width: $layout-breakpoint-xsmall) {

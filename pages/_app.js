@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
-import { ThemeProvider } from 'next-themes'
-import { Montserrat } from '@next/font/google'
+//import classnames
+import classNames from 'classnames';
+import { ThemeProvider } from 'next-themes';
+import { Montserrat } from '@next/font/google';
+import { motion, AnimatePresence } from 'framer-motion';
 import '../styles/sass/main.scss';
 import '../styles/global.css';
-// import 'tailwindcss/tailwind.css'
-import { motion, AnimatePresence } from 'framer-motion';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -16,9 +17,9 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider>
       <AnimatePresence mode="wait" initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
-        <motion.main className={montserrat.className}>
+        <motion.div className={classNames('app-container', montserrat.className)}>
           <Component {...pageProps} />
-        </motion.main>
+        </motion.div>
       </AnimatePresence>
     </ThemeProvider>
   );
