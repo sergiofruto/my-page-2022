@@ -9,7 +9,7 @@ import classNames from "classnames";
 const Showcase = () => {
   const [index, setindex] = useState(0);
 
-  const components = [<HomeBanner />, <HorizontalSlider />];
+  const components = [<HorizontalSlider />];
 
   const variants = {
     initial: {

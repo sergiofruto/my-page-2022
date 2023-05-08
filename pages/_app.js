@@ -1,11 +1,9 @@
-import { useState, useEffect } from 'react';
-//import classnames
+import '../styles/global.css';
+import '../styles/sass/main.scss';
 import classNames from 'classnames';
 import { ThemeProvider } from 'next-themes';
 import { Montserrat } from '@next/font/google';
 import { motion, AnimatePresence } from 'framer-motion';
-import '../styles/sass/main.scss';
-import '../styles/global.css';
 
 const montserrat = Montserrat({
   subsets: ['latin'],

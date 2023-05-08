@@ -1,4 +1,4 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components; 
 
 @layer components {
@@ -14,11 +14,12 @@
   }
 }
 
-@tailwind utilities;
+@tailwind utilities; */
 
 :root {
   --fg-color: #000;
   --bg-color: #f0eff1;
+  --transparency-bg-color: rgba(255, 255, 255, 0.37);
   --txt-color: #000;
   --background-color: rgb(6, 11, 25);
   --border-color: rgb(255, 255, 255, 0.1);
@@ -34,6 +35,7 @@
   --fg-color: #fff;
   --bg-color: #000;
   --txt-color: #fff;
+  --transparency-bg-color: rgba(255, 255, 255, 0.37);
 }
 
 * {
