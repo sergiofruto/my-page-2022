@@ -2,13 +2,15 @@ import '../styles/global.css';
 import '../styles/sass/main.scss';
 import classNames from 'classnames';
 import { ThemeProvider } from 'next-themes';
-import { Montserrat } from '@next/font/google';
+import { Montserrat, Poppins } from '@next/font/google';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
   }
 );
+
+const poppins = Poppins({ weight: ["300", "500"], subsets: ["latin"] });
 
 // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {

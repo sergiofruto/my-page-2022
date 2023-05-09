@@ -44,6 +44,7 @@
 .nav-logo-section a {
   display: block;
   margin: 0 auto;
+  text-decoration: none;
 }
 
 .nav-logo-section {
