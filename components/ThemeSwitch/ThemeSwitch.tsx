@@ -22,9 +22,9 @@ const ThemeSwitch = () => {
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       {theme === "dark" ? (
-        <HiOutlineSun size={"2rem"} color={"var(--txt-color)"} />
+        <HiOutlineSun size={"2.2rem"} color={"var(--txt-color)"} />
       ) : (
-        <HiOutlineMoon size={"2rem"} color={"var(--txt-color)"} />
+        <HiOutlineMoon size={"2.2rem"} color={"var(--txt-color)"} />
       )}
     </button>
   );

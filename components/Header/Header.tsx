@@ -1,10 +1,12 @@
 import styles from "./Header.module.css";
 import classNames from "classnames";
 import Link from "next/link";
-import { BsGithub } from "react-icons/bs";
-import { BsStackOverflow } from "react-icons/bs";
-import { BsLinkedin } from "react-icons/bs";
-import { HiOutlineMail, HiMenuAlt3 } from "react-icons/hi";
+import {
+  BsGithub,
+  BsStackOverflow,
+  BsLinkedin,
+  BsFillEnvelopeFill,
+} from "react-icons/bs";
 import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
 import ShowcaseControls from "../ShowcaseControls/ShowcaseControls";
 
@@ -12,43 +14,38 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <div
-          className={classNames(
-            styles["nav-logo-section"],
-            styles["nav-section"]
-          )}
-        >
+        <div className={classNames(styles["nav-logo-section"])}>
           <Link href="/">
             <span className={styles["logo-initials"]}>SF</span>
           </Link>
         </div>
-        <div
-          className={classNames(
-            styles["nav-contact-section"],
-            styles["nav-section"]
-          )}
-        ></div>
-        <div
-          className={classNames(
-            styles["nav-social-section"],
-            styles["nav-section"]
-          )}
-        >
-          {/* <Link href="https://github.com/sergiofruto">
-            <BsGithub size="1rem" />
-          </Link>
-          <Link href="https://stackoverflow.com/users/5463321/sergio-fruto">
-            <BsStackOverflow size="1rem" />
-          </Link>
-          <Link href="https://www.linkedin.com/in/sergio-fruto/">
-            <BsLinkedin size="1rem" />
-          </Link> */}
-          <a
-            className={styles["nav-contact"]}
-            href="mailto:someone@example.com"
+        <div className={classNames(styles["nav-social-section"])}>
+          <Link
+            className={styles["nav-link"]}
+            href="https://github.com/sergiofruto"
           >
-            <HiOutlineMail size="2rem" />
+            <BsGithub size="2.2rem" />
+          </Link>
+          <Link
+            className={styles["nav-link"]}
+            href="https://stackoverflow.com/users/5463321/sergio-fruto"
+          >
+            <BsStackOverflow size="2.2rem" />
+          </Link>
+          <Link
+            className={styles["nav-link"]}
+            href="https://www.linkedin.com/in/sergio-gabriel-fruto-41084645/"
+          >
+            <BsLinkedin size="2.2rem" />
+          </Link>
+          <a
+            className={styles["nav-link"]}
+            href="mailto:fruto.sergio@gmail.com"
+          >
+            <BsFillEnvelopeFill size="2.2rem" />
           </a>
+        </div>
+        <div className={styles["nav-theme-switch"]}>
           <ThemeSwitch />
         </div>
       </nav>

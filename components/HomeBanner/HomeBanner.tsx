@@ -5,9 +5,9 @@ import { motion, AnimatePresence } from "framer-motion";
 const HomeBanner = () => {
   const [second, setSecond] = useState(false);
 
-  const handleDone = () => {
-    setSecond(true);
-  };
+  // const handleDone = () => {
+  //   setSecond(true);
+  // };
 
   useEffect(() => {
     const timer = setTimeout(() => setSecond(true), 1000);
@@ -32,7 +32,6 @@ const HomeBanner = () => {
                 typeSpeed={70}
                 deleteSpeed={50}
                 delaySpeed={1000}
-                onLoopDone={handleDone}
               />
             </span>
           </h1>
