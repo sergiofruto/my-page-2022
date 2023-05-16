@@ -1,25 +1,18 @@
-import React, { use, useState } from "react";
-import Typist from "react-typist";
-import { Typewriter, Cursor } from "react-simple-typewriter";
-import { useTypewriter } from "react-simple-typewriter";
-
+import React, { useEffect, useState } from "react";
+import { Typewriter } from "react-simple-typewriter";
 import { motion, AnimatePresence } from "framer-motion";
 
 const HomeBanner = () => {
-  const [showCursor, setShowCursor] = useState(true);
   const [second, setSecond] = useState(false);
-  const [third, setThird] = useState(false);
-
-  const handleType = (count: number) => {
-    // access word count number
-    console.log(count);
-  };
 
   const handleDone = () => {
     setSecond(true);
-    console.log(`Done after 1 loops!`);
-    console.log(second);
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => setSecond(true), 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="banner-container">
@@ -35,48 +28,35 @@ const HomeBanner = () => {
             <span className="title">
               <Typewriter
                 words={["I'M SERGIO FRUTO"]}
-                cursor
-                cursorStyle="_"
                 loop={1}
                 typeSpeed={70}
                 deleteSpeed={50}
                 delaySpeed={1000}
-                onType={handleType}
+                onLoopDone={handleDone}
               />
             </span>
           </h1>
-          <h2>
-            <span className="subtitle">
-              <Typewriter
-                words={[
-                  "frontend developer",
-                  "ui specialist",
-                  "css lover",
-                  "frontend developer",
-                ]}
-                loop={5}
-                cursor
-                cursorStyle="_"
-                typeSpeed={70}
-                deleteSpeed={50}
-                delaySpeed={2000}
-                onLoopDone={handleDone}
-                onType={handleType}
-              />
-              {/* {second ? (
+          {second ? (
+            <h2>
+              <span className="subtitle">
                 <Typewriter
-                  words={["frontend developer", "ui specialist", "css lover"]}
-                  loop={5}
+                  words={[
+                    "frontend developer",
+                    "ui specialist",
+                    "css lover",
+                    "frontend developer",
+                  ]}
+                  loop={1}
+                  cursor
                   cursorStyle="_"
+                  cursorBlinking
                   typeSpeed={70}
                   deleteSpeed={50}
                   delaySpeed={2000}
-                  onLoopDone={handleDone}
-                  onType={handleType}
                 />
-              ) : null} */}
-            </span>
-          </h2>
+              </span>
+            </h2>
+          ) : null}
         </div>
       </motion.div>
     </div>
