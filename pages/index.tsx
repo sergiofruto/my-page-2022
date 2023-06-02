@@ -9,7 +9,7 @@ const IndexPage = () => (
   <Layout title="Sergio Gabriel | Frontend Developer">
     <main>
       <HomeBanner />
-      <ColorGrid></ColorGrid>
+      {/* <ColorGrid></ColorGrid> */}
       {/* <Banner />
       <JobsHistory /> */}
     </main>

@@ -34,6 +34,12 @@
     padding-top: 2rem;
 }
 
+.grid-controls > button {
+  padding: 10px;
+  line-height: 1;
+  margin-left: 8px;
+}
+
 .grid-controls-text {
   color: var(--color-text);
   margin-right: 2rem;
