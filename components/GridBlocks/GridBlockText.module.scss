@@ -11,18 +11,20 @@
 
 .title {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 
 .subtitle {
   margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .icon {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
-  font-size: 2.4rem;
+  font-size: 1.2rem;
   color: var(--txt-color);
 }

@@ -4,4 +4,9 @@
   width: 100%;
   background-size: cover;
   background-position: 50% 50%;
+  transition: .5s all cubic-bezier(0.47, 0, 0.745, 0.715);
+
+  &:hover {
+    transform: scale(1.2);
+  }
 }
