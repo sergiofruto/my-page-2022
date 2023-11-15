@@ -64,26 +64,32 @@ const Homepage = () => {
       </div>
       <div className={styles.div8}>
         <div className={styles["inner-box"]}>
-          <a href="">
+          <Link href="https://github.com/sergiofruto" target="_blank">
             <BsGithub size="1.5rem" color="var(--txt-color)"></BsGithub>
-          </a>
+          </Link>
         </div>
       </div>
       <div className={styles.div9}>
         <div className={styles["inner-box"]}>
-          <a href="">
+          <Link
+            href="https://www.linkedin.com/in/sergio-gabriel-fruto-41084645/"
+            target="_blank"
+          >
             <BsLinkedin size="1.5rem" color="var(--txt-color)"></BsLinkedin>
-          </a>
+          </Link>
         </div>
       </div>
       <div className={styles.div10}>
         <div className={styles["inner-box"]}>
-          <a href="">
+          <Link
+            href="https://stackoverflow.com/users/5463321/sergio-gabriel-fruto"
+            className="p-2"
+          >
             <BsStackOverflow
               size="1.5rem"
               color="var(--txt-color)"
             ></BsStackOverflow>
-          </a>
+          </Link>
         </div>
       </div>
       <div className={styles.div11}>

@@ -79,7 +79,10 @@ a {
 main {
   min-width: 100%;
   background-color: #38373D;
-  /* min-height: 100vh; */
   position: relative;
   z-index: 1;
+}
+
+main.kin {
+  background-color: initial;
 }
